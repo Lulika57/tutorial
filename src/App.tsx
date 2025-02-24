@@ -1,20 +1,24 @@
-import { useState } from "react";
+import { useState } from 'react';
 import './App.css';
-import Alert from "./components/Alert";
-import Button from "./components/Button";
-import Button2 from "./components/Button2";
-// import {Button2} from "./components/Button2";
+
+export const listOfProvinces = ["Ontario", "Brutish Columbia", "Nova Scotia"]
+export const listOfCities = ["Toronto", "Vancouver", "Halifax"]
 
 function App() {
-    const [alertVisible, setAlertVisibility] = useState(false);
+
+    const [selectedIndex, setSelectedIndex] = useState(-1);
 
     return (
-        <div>
-            {alertVisible && <Alert title='You are a QUEEN' onClose={() => setAlertVisibility(false)} />}
-            {/* <Button  onClick={() => setAlertVisibility((prev) => !prev)}>
-                Click Here
-            </Button> */}
-            <Button2 onClick={() => setAlertVisibility((prev) => !prev)}></Button2>
+        <div className="w-full flex flex-col">
+            {listOfProvinces.map((province, index) => (
+                <>
+                    <p onClick={() => setSelectedIndex(index)} key={index}>{province}</p>
+                    <hr />
+                </>
+            ))}
+            {selectedIndex >= 0 && <p>
+                the capital of province is city
+            </p>}
         </div>
     );
 }

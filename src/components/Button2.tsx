@@ -1,30 +1,13 @@
-interface props {
-    onClick: any;
+interface Props {
+    onClick: () => void;
 }
 
-export const Button2 = ({ onClick }: props) => {
-    const handleClick = () => {
-        alert('Hey!')
-    }
-    // variables and logic (JS)
+export const Button2 = ({ onClick }: Props) => {
 
+    return (
+        <button className="bg-purple-300 rounded px-2.5 py-2 text-white text-3xl" onClick={onClick}>
+            My Button
+        </button>
 
-    return (<>
-        <button className="bg-pink-400 rounded px-8 py-8 text-white"
-            onClick={onClick}>
-            <p className="text-5xl">My button</p></button>
-        {/* Fwebsite content (CSS/HTML) */}
-    </>)
+    )
 }
-
-export const Button3 = () => {
-    return (<>
-    </>)
-}
-
-export const Button4 = () => {
-    return (<>
-    </>)
-}
-
-export default Button2;
