@@ -8,19 +8,33 @@ function App() {
 
     const [selectedIndex, setSelectedIndex] = useState(-1);
 
+    function handleClick() {
+        const somethingIsAlreadyClicked = selectedIndex >= 0;
+        if (somethingIsAlreadyClicked) {
+            setSelectedIndex(-1)
+        }
+        else {
+
+        }
+    }
+
     return (
         <div className="w-full flex flex-col">
             {listOfProvinces.map((province, index) => (
                 <>
-                    <p onClick={() => setSelectedIndex(index)} key={index}>{province}</p>
+                    <p onClick={handleClick} key={index}>{province}</p>
+                    {selectedIndex === index && <p>
+                        the capital of {listOfProvinces[selectedIndex]} is {listOfCities[selectedIndex]}
+                    </p>}
                     <hr />
                 </>
             ))}
-            {selectedIndex >= 0 && <p>
-                the capital of province is city
-            </p>}
+
         </div>
     );
 }
 
 export default App;
+
+// fix duplication bug
+// we want to be able to close on reclick
