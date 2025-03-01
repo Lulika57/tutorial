@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import cn from 'clsx';
 import './App.css';
+import { ExampleButton } from './ExampleButton';
+
 
 
 function App() {
 
     return (
-        <></>
+        <>
+            <ExampleButton />
+        </>
     )
 }
 
 export default App;
 
-// Correct width of colors
-// Make a title
-// Inset Pictures
-// Create check boxes
