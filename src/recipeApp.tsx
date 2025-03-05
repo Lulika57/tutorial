@@ -2,8 +2,8 @@ import { useState } from 'react';
 import cn from 'clsx';
 import './App.css';
 
-export const listOfIngridients = ["Kefir", "Butter", "Sugar", "Eggs", "Soda", "Flour", "Vanilla"];
-export const listOfMesurement = ["150 g", "100 g", "200 g", "2", "0.5 tsp", "250 g", "0.5 tsp"];
+export const listOfIngridients = ["Kefir", "Butter", "Sugar", "Eggs", "Baking soda", "Flour", "Vanilla"];
+export const listOfMesurement = ["150 g", "100 g", "200 g", "2", "0.5 tsp mixed with vinegar", "approximately 250 g", "0.5 tsp"];
 export const shownIngredientIndexes = [false, false, false, false, false, false, false];
 
 function App() {
@@ -23,14 +23,14 @@ function App() {
     }
 
     return (
-        <div className="w-full flex flex-col">
+        <div className="w- flex-col">
 
             {listOfIngridients.map((ingridient, index) => (
                 <div
                     onClick={() => handleClick(index)}
                     className={cn(
                         'shadow-green-50 px-2.5 py-4 text-2xl text-white',
-                        isEven(index) ? 'bg-green-900' : 'bg-orange-500'
+                        isEven(index) ? 'bg-pink-200' : 'bg-gray-400'
                     )}
                 >
                     <p key={index}> {ingridient} </p>
