@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import cn from 'clsx';
 import './App.css';
-import { PhotoSlideShow } from './PhotoSlideShow';
+import { SlideShowMarquee } from './SlideShowMarquee';
 
 
 
@@ -46,7 +46,7 @@ function App() {
                             {/* // stopPropagation means the elements belove it won't know that the element has been clicked */}
                             <p key={index}> {ingridient} </p>
                         </div>
-                        {// key is a unique identifier}
+                        {/* // key is a unique identifier} */}
 
                             {
                                 selectedIndexes[index] &&
@@ -78,9 +78,7 @@ function App() {
             </div>
 
             <div className='w-[50vw] bg-amber-200'>
-                <Marquee>
-
-                </Marquee>
+                <SlideShowMarquee />
             </div>
         </div>
     );

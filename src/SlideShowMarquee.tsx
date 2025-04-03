@@ -1,5 +1,3 @@
-import React from "react";
-// import MyComponent from "../components/MyComponent";
 import Marquee from "react-fast-marquee";
 
 import muffinPic from './assets/1.jpg';
@@ -18,17 +16,16 @@ const muffinPics = [
 export const SlideShowMarquee = () => {
 
     return (
-        <div>
         <Marquee
-        direction: "down"
-    pauseOnClick: { true }
+            className="size-full"
+            direction={"down"}
+            pauseOnClick={true}
         >
-    {
-        muffinPics.map((muffinPic, index) => (
-            <key= { index } >
-            <img src={ muffinPic } className = "object-cover" > </img>
-            </>
-            </Marquee>
-            </div>
-        )
-    }
+            {muffinPics.map((muffinPic, index) => (
+                <div className="size-40">
+                    <img key={index} src={muffinPic} className="object-contain" />
+                </div>
+            ))}
+        </Marquee >
+    )
+}
