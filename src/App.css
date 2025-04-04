@@ -1,1 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 @import "tailwindcss";
+
+/* Apply this class to any scrollable element */
+.custom-scrollbar {
+  overflow-y: auto; /* or scroll */
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f0fdf4; /* scrollbar track (background) */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ff95f6; /* scrollbar thumb (handle) */
+  border-radius: 10px;
+  border: 2px solid transparent; /* creates padding around the thumb */
+  background-clip: content-box;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #ff95f6 #f0fdf4;
+}
+
+.font-amatic {
+    font-family: "Amatic SC";
+}

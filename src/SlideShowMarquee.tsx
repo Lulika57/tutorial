@@ -22,7 +22,7 @@ export const SlideShowMarquee = () => {
             pauseOnClick={true}
         >
             {muffinPics.map((muffinPic, index) => (
-                <img key={index} src={muffinPic} className="w-50 h-32 object-cover" />
+                <img key={index} src={muffinPic} className="w-50 h-32 object-cover rounded-xl mx-2 shadow" />
             ))}
         </Marquee >
     )

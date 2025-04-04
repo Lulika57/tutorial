@@ -32,13 +32,13 @@ function App() {
     return (
         <div className="size-screen overflow-hidden">
             <div className='flex h-[80vh]'>
-                <div className="w-[40%] ">
-                    <p className='text-5xl text-green-950 shadow-green-100 text-center py-2.5'>🧁 Nastya's Favourite Muffins 🧁</p>
+                <div className="w-[40%] max-h-[80vh] overflow-auto custom-scrollbar">
+                    <p className='font-amatic font-bold text-5xl text-green-950'>🧁 Nastya's Favourite Muffins 🧁</p>
                     {listOfIngridients.map((ingridient, index) => (
                         <div
                             onClick={() => handleClick(index)}
                             className={cn(
-                                'shadow-green-50 px-2.5 py-4 text-2xl text-white',
+                                'shadow-green-50 px-2.5 py-3 text-2xl text-white',
                                 isEven(index) ? 'bg-green-800' : 'bg-pink-200'
                             )}
                         >
@@ -79,7 +79,7 @@ function App() {
                 </div>
             </div>
 
-            <div className="fixed bottom-6 left-0 w-full h-[15vh]">
+            <div className="fixed bottom-7 left-0 w-full h-[15vh]">
                 <SlideShowMarquee />
             </div>
         </div>
