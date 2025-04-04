@@ -17,17 +17,12 @@ export const SlideShowMarquee = () => {
 
     return (
         <Marquee
-            className="
-            h-screen;
-            w-full;
-            quantity: 9"
-            direction={"down"}
+            className=""
+            direction={"right"}
             pauseOnClick={true}
         >
             {muffinPics.map((muffinPic, index) => (
-                <div className="flex h-screen">
-                    <img key={index} src={muffinPic} className="h-screen w-[50vw] object-cover" />
-                </div>
+                <img key={index} src={muffinPic} className="w-50 h-32 object-cover" />
             ))}
         </Marquee >
     )
