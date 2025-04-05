@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Yellowtail&display=swap');
 @import "tailwindcss";
 
 /* Apply this class to any scrollable element */
@@ -31,4 +31,8 @@
 
 .font-amatic {
     font-family: "Amatic SC";
+}
+
+.font-yellowtail {
+    font-family: "Yellowtail";
 }
