@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './App.css';
-import Alert from "./components/Alert";
-import Button from "./components/Button";
+// import Alert from "./components/Alert";
+// import Button from "./components/Button";
 import { Button2 } from "./components/Button2";
 import { Alert2 } from "./components/Alert2";
 // import Button2 from "./components/Button2";

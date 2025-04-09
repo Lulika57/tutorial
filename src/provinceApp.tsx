@@ -24,7 +24,7 @@ function App() {
     return (
         <div className="w-full flex flex-col">
             {listOfProvinces.map((province, index) => (
-                <div onClick={(event) => handleClick(index)}>
+                <div onClick={() => handleClick(index)}>
                     <p key={index}>{province}</p>
                     {selectedIndex == index && <p>
                         the capital of {listOfProvinces[selectedIndex]} is {listOfCities[selectedIndex]}
