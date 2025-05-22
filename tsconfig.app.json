@@ -22,5 +22,14 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "oldComponents/buttonApp.tsx",
+    "oldComponents/ExampleButton.tsx",
+    "oldComponents/PhotoSlideShow.tsx",
+    "oldComponents/provinceApp.tsx",
+    "oldComponents/hi.tsx",
+    "oldComponents/components",
+    "oldComponents/App.tsx"
+  ]
 }
